@@ -3,7 +3,7 @@
 
 let a = 8;
 let b = 3;
-let remainder = (a - (b * parseInt(a / b)));
+let remainder = (a - (b * Math.floor(a / b)));
 let result = a % b;
 
 console.log(`No mod = ${remainder}`);
