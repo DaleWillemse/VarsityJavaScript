@@ -1,4 +1,4 @@
-// What is the hgihest mark in the array called marks? Create a function called highestMark
+// What is the highest mark in the array called marks? Create a function called highestMark
 // which returns the answer.
 
 let user = {
