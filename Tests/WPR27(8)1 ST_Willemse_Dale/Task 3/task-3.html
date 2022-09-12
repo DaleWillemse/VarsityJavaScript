@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: auto;
+      padding: auto;
+      box-sizing: border-box;
+      border-collapse: collapse;
+    }
+
+    .main {
+      height: 5vh;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    #inputValue {
+      padding: 2rem;
+      border: none;
+      background-color: black;
+      color: whitesmoke;
+      border-bottom: 2px solid red;
+      color: whitesmoke;
+    }
+
+    .bulbs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      height: 70vh;
+      background-color: black;
+      margin: auto;
+    }
+
+    #left {
+      width: 45%;
+      height: 80%;
+      background-color: red;
+    }
+
+    #right {
+      width: 45%;
+      height: 80%;
+      background-color: red;
+    }
+
+    .bulbs h1 {
+      color: white;
+    }
+
+    .buttons {
+      height: 10vh;
+    }
+
+    footer button {
+      border: none;
+      background-color: red;
+      font-weight: 1200;
+      padding: 2rem 12rem;
+      cursor: pointer;
+    }
+
+    .main header>span {
+      font-size: xx-large;
+    }
+
+    header {
+      width: 97%;
+      background-color: aquamarine;
+    }
+
+    h3 {
+      margin-top: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <span>Enter a number here in this box ( and sorry for the late start time):
+      </span>
+      <input type="inputValue" id="inputValue" />
+    </header>
+    <div class="bulbs">
+      <div id="left">
+        <span>
+          <h3>
+            If this number is odd, this background should change to orange.
+            Use the button at the bottom to test your output.
+          </h3>
+        </span>
+      </div>
+      <div id="right">
+        <span>
+          <h3>
+            If this number is even, this background should change to green. Use
+            the button at the bottom to test your output.
+          </h3>
+        </span>
+      </div>
+    </div>
+    <footer><button onclick="CheckNumber()">TEST</button></footer>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

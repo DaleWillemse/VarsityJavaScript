@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            margin: auto;
+            width: 70%;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-gap: 2em;
+            padding: 1em;
+        }
+
+        .wrapper>div>input {
+            width: 85%;
+            line-height: 2em;
+        }
+
+        .wrapper input[type='text'] {
+            margin: 2em;
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 0px 0px 13px 13px;
+        }
+
+        .wrapper input[type='button'] {
+            margin: 1em;
+            height: 2em;
+            border: none;
+            background-color: tomato;
+            color: white;
+        }
+
+        #answer {
+            height: 80px;
+            line-height: 2em;
+            width: 70%;
+            background-color: rgb(241, 236, 236);
+            margin: auto;
+            font-style: italic;
+
+        }
+
+        header h2 {
+            width: 100%;
+            background-color: black;
+            color: chocolate;
+            text-align: center;
+            line-height: 2em;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>
+            Welcome to my simple calculator
+        </h2>
+    </header>
+    <div class="wrapper">
+
+        <div>
+            <input type="text" id="num1" name="firstNumber" placeholder="Please input a number">
+            <input type="text" id="num2" name="secondNumber" placeholder="Please input a second number">
+
+        </div>
+        <div>
+            <input type="button" onclick="Addition()" name="add" value="ADD (+)">
+            <input type="button" onclick="Subtraction()" name="subtract" value="Subtract (-)">
+            <input type="button" onclick="Multiplication()" name="multiply" value="Multiply (*)">
+            <input type="button" onclick="Division()" name="divide" value="DIVIDE (/)">
+
+        </div>
+
+    </div>
+    <div id="answer">
+        Your answer, or error will appear here.
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
