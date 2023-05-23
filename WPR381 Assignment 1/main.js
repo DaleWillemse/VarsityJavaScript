@@ -11,19 +11,18 @@ rl.question(
   "\nPlease enter the shape you want to draw: \n1. Triangle\n2. Square\n3. Diamond\n4. Exit\n\nEnter your choice : ",
   (shape) => {
     shape = parseInt(shape);
-    if (shape == 4) {
+    if (shape == 1) {
+      drawShape("triangle", shape);
+    } else if (shape == 2) {
+      drawShape("square", shape);
+    } else if (shape == 3) {
+      drawShape("diamond", shape);
+    } else if (shape == 4) {
+      console.log("Exiting...");
       rl.close();
     } else {
-      if (shape == 1) {
-        drawShape("triangle", shape);
-      } else if (shape == 2) {
-        drawShape("square", shape);
-      } else if (shape == 3) {
-        drawShape("diamond", shape);
-      } else {
-        console.log("Invalid input");
-        rl.close();
-      }
+      console.log("Invalid input");
+      rl.close();
     }
   }
 );
