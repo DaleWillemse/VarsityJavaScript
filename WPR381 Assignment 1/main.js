@@ -10,7 +10,8 @@ const rl = readline.createInterface({
 rl.question(menu.displayMenu(), (shape) => {
   shape = parseInt(shape);
   if (shape > 0 && shape < 4) {
-    drawShape(shape);
+    shapeName = menu.shapeName(shape);
+    drawShape(shapeName, shape);
   } else if (shape == 4) {
     rl.close();
   } else {
@@ -20,7 +21,8 @@ rl.question(menu.displayMenu(), (shape) => {
     rl.on("line", (shape) => {
       shape = parseInt(shape);
       if (shape > 0 && shape < 4) {
-        drawShape(shape);
+        shapeName = menu.shapeName(shape);
+        drawShape(shapeName, shape);
       } else if (shape == 4) {
         rl.close();
       } else {
@@ -40,8 +42,8 @@ rl.on("close", () => {
 });
 
 // Function that takes shape name and shape choice as input and draws the shape to the console.
-function drawShape(shape) {
-  rl.question(`\nPlease enter the dimension : `, (n) => {
+function drawShape(shapeName, shape) {
+  rl.question(`\nPlease enter the ${shapeName}'s dimension : `, (n) => {
     n = parseInt(n);
     if (n > 0 && Number.isInteger(n)) {
       if (shape == 1) {
@@ -78,5 +80,6 @@ function drawShape(shape) {
         }
       });
     }
+    rl.close();
   });
 }
