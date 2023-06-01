@@ -1,0 +1,14 @@
+POST http://localhost:7873/users/add
+Content-Type: application/json
+
+{
+    "name": "Dale",
+    "surname": "Doe"
+}
+###
+
+GET http://localhost:7873/users/view
+
+###
+
+GET http://localhost:7873/users/view/6478d8a50e7b506334e64b1b
