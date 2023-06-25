@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Records | People</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" />
+  </head>
+  <body>
+    <%- include('./partials/header') %> <% peopleArr.sort((a,b)=>{return
+    a.name.localeCompare(b.name)}) %> <% if(peopleArr.length==0){ %>
+    <h1>No Records Found</h1>
+    <% } %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Job</th>
+      </tr>
+      <% peopleArr.forEach(person => { %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.gender %></td>
+        <td><%= person.job %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

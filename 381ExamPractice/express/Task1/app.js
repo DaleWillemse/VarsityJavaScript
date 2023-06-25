@@ -1,27 +1,27 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 const bodyParser = require("body-parser");
-const jediArr = [
+const port = 3000;
+const peopleArr = [
   {
-    name: "Luke Skywalker",
+    name: "Marry Poppins",
     gender: "Male",
-    activity: "Volleyball",
+    job: "Taxi Driver",
   },
   {
-    name: "Obi-Wan Kenobi",
+    name: "Larry King",
     gender: "Male",
-    activity: "Soccer",
+    job: "Journalist",
   },
   {
-    name: "Shaak Ti",
+    name: "Susan Summers",
     gender: "Female",
-    activity: "Paintball",
+    job: "Actress",
   },
   {
-    name: "Mace Windu",
+    name: "Bobby Brown",
     gender: "Male",
-    activity: "Gaming",
+    job: "Singer",
   },
 ];
 
@@ -32,9 +32,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/add", (req, res) => {
-  const newJedi = req.body;
-  jediArr.push(newJedi);
-  console.log(newJedi.name + " has been added to the array");
+  const newPerson = req.body;
+  peopleArr.push(newPerson);
+  console.log(newPerson.name + " has been added to the array");
   res.redirect("/view");
 });
 
@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/view", (req, res) => {
-  res.render("view", { jediArr });
+  res.render("view", { peopleArr });
 });
 
 app.get("/add", (req, res) => {
